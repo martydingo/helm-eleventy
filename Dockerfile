@@ -3,7 +3,7 @@ USER root
 RUN mkdir /app
 RUN mkdir /project
 RUN mkdir /www
-RUN useradd eleventy:eleventy -u 1000 -g 1000 -M -d /project
+RUN useradd eleventy -u 1000 -g 1000 -M -d /project
 RUN chown -R eleventy: /project
 RUN chown -R eleventy: /www
 USER eleventy
