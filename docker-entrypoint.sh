@@ -1,6 +1,7 @@
 #!/bin/bash
 
-cd /projects
+cd /projects/$PROJECT
+
 if [ -f "/projects/$PROJECT/prepare.sh" ]; then
     /bin/bash -c "/projects/$PROJECT/prepare.sh"
 fi
