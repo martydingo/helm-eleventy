@@ -10,4 +10,8 @@ if [ -f "/projects/$PROJECT/prepare.sh" ]; then
     /bin/bash -c "/projects/$PROJECT/prepare.sh"
 fi
 
-npx @11ty/eleventy --input /projects/$PROJECT --output /www --serve
+if [ -f "/projects/$PROJECT/run.sh" ]; then
+    /bin/bash -c "/projects/$PROJECT/run.sh"
+fi
+
+/bin/sleep 315360000
