@@ -1,6 +1,7 @@
 FROM node:latest
-RUN mkdir /project
+RUN mkdir /projects
 RUN mkdir /www
-WORKDIR /project
+COPY docker-entrypoint.sh /
+WORKDIR /projects
 RUN npm install -g @11ty/eleventy
-ENTRYPOINT ['sh', '-c', 'npx @11ty/eleventy --serve']
+ENTRYPOINT ['bash', '-c', '/docker-entrypoint.sh']
